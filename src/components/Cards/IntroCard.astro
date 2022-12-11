@@ -2,34 +2,76 @@
 import { AUTHOR_NAME, JOB_COMPANY, JOB_TITLE, JOB_URL } from "../../config";
 ---
 
-<div>
-  <h1>{AUTHOR_NAME}</h1>
+<div id="intro-card">
+  <h1 id="author-name">{AUTHOR_NAME}</h1>
   <img
+    id="profile-picture"
     src="/jordan.png"
     alt="stylized illustration of female with brown hair and blue glasses"
   />
-  <ul>
-    <li>
-      <span>Website:</span>
-      <a href="https://mjordan.codes">mjordan.codes</a>
-    </li>
-    <li>
-      <span>Pronouns:</span>
-      <span>she/her</span>
-    </li>
-    <li>
-      <span>{JOB_TITLE}</span> at <a
-        href={JOB_URL}
-        target="_blank"
-        rel="noopener noreferrer">{JOB_COMPANY}</a
-      >
-    </li>
-    <li>
-      <span>Director</span> at <a
-        href="https://www.womenwhocode.com/boulder-denver/about"
-        target="_blank"
-        rel="noopener noreferrer">Women Who Code Boulder/Denver</a
-      >
-    </li>
-  </ul>
+  <div id="facts">
+    <ul>
+      <li>
+        <span>Website:</span>
+        <a href="https://mjordan.codes">mjordan.codes</a>
+      </li>
+      <li>
+        <span>Pronouns:</span>
+        <span>she/her</span>
+      </li>
+      <li>
+        <span>{JOB_TITLE}</span> at <a
+          href={JOB_URL}
+          target="_blank"
+          rel="noopener noreferrer">{JOB_COMPANY}</a
+        >
+      </li>
+      <li>
+        <span>Director</span> at <a
+          href="https://www.womenwhocode.com/boulder-denver/about"
+          target="_blank"
+          rel="noopener noreferrer">Women Who Code Boulder/Denver</a
+        >
+      </li>
+    </ul>
+  </div>
 </div>
+
+<style>
+  #intro-card {
+    border: 1px solid black;
+    font-family: var(--font_body);
+    display: grid;
+    grid-template-areas:
+      "img name"
+      "img info";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr;
+    width: clamp(350px, 100%, 750px);
+    padding: 10px 10px 0;
+  }
+
+  #profile-picture {
+    grid-area: img;
+    width: 100%;
+  }
+
+  #author-name {
+    grid-area: name;
+    font-family: var(--font_headings);
+    margin: 0;
+    text-align: center;
+  }
+
+  #facts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #facts ul {
+    grid-area: info;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+</style>
