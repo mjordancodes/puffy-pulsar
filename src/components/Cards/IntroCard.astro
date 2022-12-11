@@ -1,0 +1,35 @@
+---
+import { AUTHOR_NAME, JOB_COMPANY, JOB_TITLE, JOB_URL } from "../../config";
+---
+
+<div>
+  <h1>{AUTHOR_NAME}</h1>
+  <img
+    src="/jordan.png"
+    alt="stylized illustration of female with brown hair and blue glasses"
+  />
+  <ul>
+    <li>
+      <span>Website:</span>
+      <a href="https://mjordan.codes">mjordan.codes</a>
+    </li>
+    <li>
+      <span>Pronouns:</span>
+      <span>she/her</span>
+    </li>
+    <li>
+      <span>{JOB_TITLE}</span> at <a
+        href={JOB_URL}
+        target="_blank"
+        rel="noopener noreferrer">{JOB_COMPANY}</a
+      >
+    </li>
+    <li>
+      <span>Director</span> at <a
+        href="https://www.womenwhocode.com/boulder-denver/about"
+        target="_blank"
+        rel="noopener noreferrer">Women Who Code Boulder/Denver</a
+      >
+    </li>
+  </ul>
+</div>

@@ -3,6 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/HeaderParts/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import IntroCard from "../components/Cards/IntroCard.astro";
 ---
 
 <!DOCTYPE html>
@@ -11,9 +12,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <Header title={SITE_TITLE} />
+    <!-- <Header title={SITE_TITLE} /> -->
     <main>
-      <h1>🧑‍🚀 Hello, Astronaut!</h1>
+      <IntroCard />
     </main>
     <Footer />
   </body>
