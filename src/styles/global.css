@@ -1,3 +1,4 @@
+@import "./variables.css";
 @import "./fonts.css";
 
 * {
@@ -8,7 +9,9 @@ body {
   margin: 0;
 }
 
-:root {
-  --font_headings: "Poiret One", sans-serif;
-  --font_body: "Montserrat", sans-serif;
+a,
+a:active,
+a:hover,
+a:visited {
+  color: var(--font_color);
 }

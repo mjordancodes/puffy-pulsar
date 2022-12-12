@@ -2,76 +2,114 @@
 import { AUTHOR_NAME, JOB_COMPANY, JOB_TITLE, JOB_URL } from "../../config";
 ---
 
-<div id="intro-card">
-  <h1 id="author-name">{AUTHOR_NAME}</h1>
+<div id="intro-card" class="theme-rainbow">
   <img
     id="profile-picture"
     src="/jordan.png"
     alt="stylized illustration of female with brown hair and blue glasses"
   />
-  <div id="facts">
-    <ul>
-      <li>
-        <span>Website:</span>
-        <a href="https://mjordan.codes">mjordan.codes</a>
-      </li>
-      <li>
-        <span>Pronouns:</span>
-        <span>she/her</span>
-      </li>
-      <li>
-        <span>{JOB_TITLE}</span> at <a
-          href={JOB_URL}
-          target="_blank"
-          rel="noopener noreferrer">{JOB_COMPANY}</a
-        >
-      </li>
-      <li>
-        <span>Director</span> at <a
-          href="https://www.womenwhocode.com/boulder-denver/about"
-          target="_blank"
-          rel="noopener noreferrer">Women Who Code Boulder/Denver</a
-        >
-      </li>
-    </ul>
+  <div id="text">
+    <h1 id="author-name">{AUTHOR_NAME}</h1>
+    <div id="facts">
+      <ul>
+        <li class="website">
+          <span>Website:</span>
+          <a href="https://mjordan.codes">mjordan.codes</a>
+        </li>
+        <li class="pronouns">
+          <span>Pronouns:</span>
+          <span>she/her</span>
+        </li>
+        <li class="job">
+          <span>{JOB_TITLE}</span> at <a
+            href={JOB_URL}
+            target="_blank"
+            rel="noopener noreferrer">{JOB_COMPANY}</a
+          >
+        </li>
+        <li class="volunteer">
+          <span>Director</span> at <a
+            href="https://www.womenwhocode.com/boulder-denver/about"
+            target="_blank"
+            rel="noopener noreferrer">Women Who Code Boulder/Denver</a
+          >
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 
-<style>
+<style lang="scss">
   #intro-card {
     border: 1px solid black;
-    font-family: var(--font_body);
+    font-family: var(--font_body_family);
+    font-size: var(--font_body_size);
     display: grid;
-    grid-template-areas:
-      "img name"
-      "img info";
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto 1fr;
-    width: clamp(350px, 100%, 750px);
-    padding: 10px 10px 0;
+    background: var(--card_background);
+    background-size: var(--card_background-size);
+    animation: var(--card_animation);
+    grid-template-rows: 200px 1fr;
+    padding: 0 10px;
+
+    #profile-picture {
+      max-width: 100%;
+      max-height: 100%;
+      margin: 0 auto;
+    }
+    #author-name {
+      margin: 0;
+      text-align: center;
+      font-family: var(--font_headings_family);
+      font-size: var(--font_headings_size);
+    }
+    #text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: var(--color_text-background);
+      margin: 10px 0;
+      padding: 0 10%;
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        .job,
+        .volunteer {
+          span,
+          a {
+            font-weight: bold;
+          }
+        }
+      }
+    }
   }
 
-  #profile-picture {
-    grid-area: img;
-    width: 100%;
+  @media screen and (min-width: 600px) {
+    #intro-card {
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 2fr;
+      width: clamp(600px, 75%, 750px);
+      // height: 250px;
+    }
   }
 
-  #author-name {
-    grid-area: name;
-    font-family: var(--font_headings);
-    margin: 0;
-    text-align: center;
+  @mixin gradientText {
+    background: var(--color_gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
-
-  #facts {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #facts ul {
-    grid-area: info;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  #intro-card.theme-rainbow {
+    #author-name {
+      @include gradientText;
+    }
+    #facts {
+      .job,
+      .volunteer {
+        span {
+          @include gradientText;
+        }
+      }
+    }
   }
 </style>

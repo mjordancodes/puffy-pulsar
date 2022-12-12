@@ -1,0 +1,70 @@
+:root {
+  /* FONTS */
+  --font_headings_family: sans-serif;
+  --font_headings_size: 32px;
+  --font_body_family: sans-serif;
+  --font_body_size: 14px;
+  --font_color: : var(--color_black);
+
+  /* COLORS */
+  --color_black: #222222;
+  --color_white: #ffffff;
+  --color_gradient: var(color_rainbow-gradient);
+
+
+  --color_rainbow-gradient: linear-gradient(
+    -45deg,
+    rgba(255, 159, 159, 1),
+    rgba(251, 198, 133, 1),
+    rgba(251, 241, 121, 1),
+    rgba(169, 252, 126, 1),
+    rgba(130, 240, 200, 1),
+    rgba(149, 202, 228, 1),
+    rgba(168, 168, 216, 1),
+    rgba(203, 166, 200, 1),
+    rgba(255, 159, 159, 1)
+  );
+
+  --color_bright-rainbow-gradient: linear-gradient(
+    90deg,
+    rgba(255, 000, 000, 1) 0%,
+    rgba(255, 154, 000, 1) 20%,
+    rgba(208, 222, 033, 1) 30%,
+    rgba(079, 220, 074, 1) 40%,
+    rgba(063, 218, 216, 1) 50%,
+    rgba(047, 201, 226, 1) 60%,
+    rgba(028, 127, 238, 1) 70%,
+    rgba(095, 021, 242, 1) 80%,
+    rgba(186, 012, 248, 1) 90%,
+    rgba(251, 007, 217, 1) 100%
+  );
+}
+
+.theme-rainbow {
+  --font_headings_family: 'Titan One', cursive;
+  --font_body_family: sans-serif;
+  --font_headings_size: 42px;
+  --color_gradient: var(--color_bright-rainbow-gradient);
+
+  --color_text-background: radial-gradient(circle, 
+          rgba(255,255,255,1) 0%, 
+          rgba(255,255,255,1) 80%, 
+          rgba(255,255,255,0) 80%);
+  --card_background:  var(--color_rainbow-gradient);
+  --card_background-size: 400% 400%;
+  --card_animation: gradient 5s ease infinite;
+}
+
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
