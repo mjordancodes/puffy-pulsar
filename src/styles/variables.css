@@ -3,13 +3,14 @@
   --font_headings_family: sans-serif;
   --font_headings_size: 32px;
   --font_body_family: sans-serif;
-  --font_body_size: 14px;
+  --font_body_size: 16px;
   --font_color: : var(--color_black);
 
   /* COLORS */
   --color_black: #222222;
   --color_white: #ffffff;
   --color_gradient: var(color_rainbow-gradient);
+  --color_accent: rgba(028, 127, 238, 1);
 
 
   --color_rainbow-gradient: linear-gradient(
@@ -44,8 +45,9 @@
   --font_headings_family: 'Titan One', cursive;
   --font_body_family: sans-serif;
   --font_headings_size: 42px;
-  --color_gradient: var(--color_bright-rainbow-gradient);
+  --font_body_size: 16px;
 
+  --color_gradient: var(--color_bright-rainbow-gradient);
   --color_text-background: radial-gradient(circle, 
           rgba(255,255,255,1) 0%, 
           rgba(255,255,255,1) 80%, 
@@ -54,6 +56,7 @@
   --card_background-size: 400% 400%;
   --card_animation: gradient 5s ease infinite;
 }
+
 
 
 

@@ -55,13 +55,9 @@ import { AUTHOR_NAME, JOB_COMPANY, JOB_TITLE, JOB_URL } from "../../config";
       max-width: 100%;
       max-height: 100%;
       margin: 0 auto;
+      padding-top: 10px;
     }
-    #author-name {
-      margin: 0;
-      text-align: center;
-      font-family: var(--font_headings_family);
-      font-size: var(--font_headings_size);
-    }
+
     #text {
       display: flex;
       justify-content: center;
@@ -69,16 +65,25 @@ import { AUTHOR_NAME, JOB_COMPANY, JOB_TITLE, JOB_URL } from "../../config";
       flex-direction: column;
       background: var(--color_text-background);
       margin: 10px 0;
-      padding: 0 10%;
-      ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        .job,
-        .volunteer {
-          span,
-          a {
-            font-weight: bold;
+      padding: 0 15%;
+      #author-name {
+        margin: 0 0 20px;
+        text-align: center;
+        font-family: var(--font_headings_family);
+        font-size: var(--font_headings_size);
+        width: 100%;
+      }
+      #facts {
+        ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          .job,
+          .volunteer {
+            span,
+            a {
+              font-weight: bold;
+            }
           }
         }
       }
@@ -100,8 +105,11 @@ import { AUTHOR_NAME, JOB_COMPANY, JOB_TITLE, JOB_URL } from "../../config";
     -webkit-text-fill-color: transparent;
   }
   #intro-card.theme-rainbow {
+    border: none;
     #author-name {
       @include gradientText;
+      border-bottom: 5px solid var(--color_accent);
+      margin: 10px;
     }
     #facts {
       .job,

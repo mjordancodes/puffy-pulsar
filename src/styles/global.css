@@ -7,6 +7,19 @@
 
 body {
   margin: 0;
+  font-family: var(--font_body_family);
+  font-size: var(--font_body_size);
+  color: var(--font_color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font_headings_family);
+  font-size: var(--font_headings_size);
 }
 
 a,
