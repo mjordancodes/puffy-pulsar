@@ -8,34 +8,32 @@ import { AUTHOR_NAME, JOB_COMPANY, JOB_TITLE, JOB_URL } from "../../config";
     src="/jordan.png"
     alt="stylized illustration of female with brown hair and blue glasses"
   />
-  <div id="text">
-    <h1 id="author-name">{AUTHOR_NAME}</h1>
-    <div id="facts">
-      <ul>
-        <li class="website">
-          <span>Website:</span>
-          <a href="https://mjordan.codes">mjordan.codes</a>
-        </li>
-        <li class="pronouns">
-          <span>Pronouns:</span>
-          <span>she/her</span>
-        </li>
-        <li class="job">
-          <span>{JOB_TITLE}</span> at <a
-            href={JOB_URL}
-            target="_blank"
-            rel="noopener noreferrer">{JOB_COMPANY}</a
-          >
-        </li>
-        <li class="volunteer">
-          <span>Director</span> at <a
-            href="https://www.womenwhocode.com/boulder-denver/about"
-            target="_blank"
-            rel="noopener noreferrer">Women Who Code Boulder/Denver</a
-          >
-        </li>
-      </ul>
-    </div>
+  <h1 id="author-name">{AUTHOR_NAME}</h1>
+  <div id="facts">
+    <ul>
+      <li class="website">
+        <span>Website:</span>
+        <a href="https://mjordan.codes">mjordan.codes</a>
+      </li>
+      <li class="pronouns">
+        <span>Pronouns:</span>
+        <span>she/her</span>
+      </li>
+      <li class="job">
+        <span>{JOB_TITLE}</span> at <a
+          href={JOB_URL}
+          target="_blank"
+          rel="noopener noreferrer">{JOB_COMPANY}</a
+        >
+      </li>
+      <li class="volunteer">
+        <span>Director</span> at <a
+          href="https://www.womenwhocode.com/boulder-denver/about"
+          target="_blank"
+          rel="noopener noreferrer">Women Who Code Boulder/Denver</a
+        >
+      </li>
+    </ul>
   </div>
 </div>
 
@@ -44,46 +42,42 @@ import { AUTHOR_NAME, JOB_COMPANY, JOB_TITLE, JOB_URL } from "../../config";
     border: 1px solid black;
     font-family: var(--font_body_family);
     font-size: var(--font_body_size);
-    display: grid;
     background: var(--card_background);
     background-size: var(--card_background-size);
     animation: var(--card_animation);
+    display: grid;
     grid-template-rows: 200px 1fr;
-    padding: 0 10px;
-
+    grid-template-areas:
+      "img"
+      "name"
+      "facts";
     #profile-picture {
+      grid-area: img;
       max-width: 100%;
       max-height: 100%;
       margin: 0 auto;
       padding-top: 10px;
+      align-self: end;
     }
-
-    #text {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background: var(--color_text-background);
-      margin: 10px 0;
-      padding: 0 15%;
-      #author-name {
-        margin: 0 0 20px;
-        text-align: center;
-        font-family: var(--font_headings_family);
-        font-size: var(--font_headings_size);
-        width: 100%;
-      }
-      #facts {
-        ul {
-          list-style-type: none;
-          padding: 0;
-          margin: 0;
-          .job,
-          .volunteer {
-            span,
-            a {
-              font-weight: bold;
-            }
+    #author-name {
+      grid-area: name;
+      margin: 0 0 20px;
+      text-align: center;
+      font-family: var(--font_headings_family);
+      font-size: var(--font_headings_size);
+    }
+    #facts {
+      grid-area: facts;
+      padding: 10px;
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        .job,
+        .volunteer {
+          span,
+          a {
+            font-weight: bold;
           }
         }
       }
@@ -92,10 +86,12 @@ import { AUTHOR_NAME, JOB_COMPANY, JOB_TITLE, JOB_URL } from "../../config";
 
   @media screen and (min-width: 600px) {
     #intro-card {
-      grid-template-rows: 1fr;
+      grid-template-rows: auto 1fr;
       grid-template-columns: 1fr 2fr;
+      grid-template-areas:
+        "img name"
+        "img facts";
       width: clamp(600px, 75%, 750px);
-      // height: 250px;
     }
   }
 
@@ -108,14 +104,22 @@ import { AUTHOR_NAME, JOB_COMPANY, JOB_TITLE, JOB_URL } from "../../config";
     border: none;
     #author-name {
       @include gradientText;
-      border-bottom: 5px solid var(--color_accent);
+      border-bottom: 10px solid var(--color_accent);
+      text-shadow: 4px 4px 0 white, 8px 8px 0 black;
       margin: 10px;
     }
     #facts {
-      .job,
-      .volunteer {
-        span {
-          @include gradientText;
+      ul {
+        background: white;
+        padding: 15px 15px 10px;
+        li {
+          padding-bottom: 5px;
+        }
+        .job,
+        .volunteer {
+          span {
+            @include gradientText;
+          }
         }
       }
     }
