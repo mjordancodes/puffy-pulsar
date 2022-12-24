@@ -2,7 +2,7 @@
 import { AUTHOR_NAME, JOB_COMPANY, JOB_TITLE, JOB_URL } from "../../config";
 ---
 
-<div id="intro-card" class="theme-rainbow">
+<div id="intro-card">
   <img
     id="profile-picture"
     src="/jordan.png"
@@ -61,7 +61,7 @@ import { AUTHOR_NAME, JOB_COMPANY, JOB_TITLE, JOB_URL } from "../../config";
     }
     #author-name {
       grid-area: name;
-      margin: 0 0 20px;
+      margin: 20px 0;
       text-align: center;
       font-family: var(--font_headings_family);
       font-size: var(--font_headings_size);
@@ -71,8 +71,8 @@ import { AUTHOR_NAME, JOB_COMPANY, JOB_TITLE, JOB_URL } from "../../config";
       padding: 10px;
       ul {
         list-style-type: none;
-        padding: 0;
         margin: 0;
+        padding: 0;
         .job,
         .volunteer {
           span,
@@ -92,36 +92,6 @@ import { AUTHOR_NAME, JOB_COMPANY, JOB_TITLE, JOB_URL } from "../../config";
         "img name"
         "img facts";
       width: clamp(600px, 75%, 750px);
-    }
-  }
-
-  @mixin gradientText {
-    background: var(--color_gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  #intro-card.theme-rainbow {
-    border: none;
-    #author-name {
-      @include gradientText;
-      border-bottom: 10px solid var(--color_accent);
-      text-shadow: 4px 4px 0 white, 8px 8px 0 black;
-      margin: 10px;
-    }
-    #facts {
-      ul {
-        background: white;
-        padding: 15px 15px 10px;
-        li {
-          padding-bottom: 5px;
-        }
-        .job,
-        .volunteer {
-          span {
-            @include gradientText;
-          }
-        }
-      }
     }
   }
 </style>

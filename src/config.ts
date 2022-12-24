@@ -8,3 +8,5 @@ export const SITE_DESCRIPTION = `Digital Garden of ${AUTHOR_NAME}`;
 export const JOB_TITLE = "CSS Engineer";
 export const JOB_COMPANY = "Universe Exploration Company";
 export const JOB_URL = "https://univer.se/";
+
+export const THEMES = ["default", "rainbow"];

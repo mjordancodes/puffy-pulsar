@@ -1,0 +1,63 @@
+.theme-rainbow {
+  --font_headings_family: "Titan One", cursive;
+  --font_headings_size: 50px;
+
+  --font_body_family: sans-serif;
+  --font_body_size: 18px;
+
+  --card_background: var(--color_rainbow-gradient);
+  --card_background-size: 300% 100%;
+  --card_animation: gradient 10s ease infinite;
+  --color_gradient: var(--color_bright-rainbow-gradient);
+}
+.theme-rainbow #intro-card {
+  border-width: 10px;
+  border-top-color: var(--color_bright-rainbow_red);
+  border-right-color: var(--color_bright-rainbow_orange);
+  border-bottom-color: var(--color_bright-rainbow_yellow);
+  border-left-color: var(--color_bright-rainbow_lime);
+  outline: 5px solid var(--color_bright-rainbow_light-blue);
+}
+.theme-rainbow #intro-card #author-name {
+  background: var(--color_gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  border-bottom: 10px solid var(--color_accent);
+  text-shadow: 4px 4px 0 var(--color_white), 8px 8px 0 var(--color_black);
+  margin: 10px;
+}
+
+.theme-rainbow #intro-card #facts ul {
+  background: white;
+  padding: 15px 15px 10px;
+}
+
+.theme-rainbow #intro-card #facts ul li {
+  padding-bottom: 5px;
+}
+
+.theme-rainbow #intro-card #facts ul .job span,
+.theme-rainbow #intro-card #facts ul .volunteer span {
+  background: var(--color_gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+button.theme-selection#rainbow {
+  background: var(--color_rainbow-gradient);
+  background-size: 100% 100%;
+  /* color: var(--color_bright-rainbow_blue); */
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

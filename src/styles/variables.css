@@ -10,64 +10,57 @@
   --color_black: #222222;
   --color_white: #ffffff;
   --color_gradient: var(color_rainbow-gradient);
-  --color_accent: rgba(028, 127, 238, 1);
+  --color_accent: var(--color_bright-rainbow_blue);
+
+  --color_light-rainbow_red: rgba(255, 159, 159, 0.8);
+  --color_light-rainbow_orange: rgba(251, 198, 133, 0.8);
+  --color_light-rainbow_yellow: rgba(251, 241, 121, 0.8);
+  --color_light-rainbow_lime: rgba(169, 252, 126, 0.8);
+  --color_light-rainbow_green: rgba(130, 240, 200, 0.8);
+  --color_light-rainbow_blue: rgba(149, 202, 228, 0.8);
+  --color_light-rainbow_purple: rgba(168, 168, 216, 0.8);
+  --color_light-rainbow_pink: rgba(203, 166, 200, 0.8);
+
+  --color_bright-rainbow_red: rgba(255, 000, 000, 1);
+  --color_bright-rainbow_orange: rgba(255, 154, 000, 1);
+  --color_bright-rainbow_yellow: rgba(208, 222, 033, 1);
+  --color_bright-rainbow_lime: rgba(079, 220, 074, 1);
+  --color_bright-rainbow_teal: rgba(063, 218, 216, 1);
+  --color_bright-rainbow_light-blue: rgba(047, 201, 226, 1);
+  --color_bright-rainbow_blue: rgba(028, 127, 238, 1);
+  --color_bright-rainbow_purple: rgba(095, 021, 242, 1);
+  --color_bright-rainbow_violet: rgba(186, 012, 248, 1);
+  --color_bright-rainbow_pink: rgba(251, 007, 217, 1);
+
+
+
 
 
   --color_rainbow-gradient: linear-gradient(
     -45deg,
-    rgba(255, 159, 159, 1),
-    rgba(251, 198, 133, 1),
-    rgba(251, 241, 121, 1),
-    rgba(169, 252, 126, 1),
-    rgba(130, 240, 200, 1),
-    rgba(149, 202, 228, 1),
-    rgba(168, 168, 216, 1),
-    rgba(203, 166, 200, 1),
-    rgba(255, 159, 159, 1)
+    var(--color_light-rainbow_red),
+    var(--color_light-rainbow_orange),
+    var(--color_light-rainbow_yellow),
+    var(--color_light-rainbow_lime),
+    var(--color_light-rainbow_green),
+    var(--color_light-rainbow_blue),
+    var(--color_light-rainbow_purple),
+    var(--color_light-rainbow_pink),
+    var(--color_light-rainbow_red)
   );
 
   --color_bright-rainbow-gradient: linear-gradient(
     90deg,
-    rgba(255, 000, 000, 1) 0%,
-    rgba(255, 154, 000, 1) 20%,
-    rgba(208, 222, 033, 1) 30%,
-    rgba(079, 220, 074, 1) 40%,
-    rgba(063, 218, 216, 1) 50%,
-    rgba(047, 201, 226, 1) 60%,
-    rgba(028, 127, 238, 1) 70%,
-    rgba(095, 021, 242, 1) 80%,
-    rgba(186, 012, 248, 1) 90%,
-    rgba(251, 007, 217, 1) 100%
+    var(--color_bright-rainbow_red),
+    var(--color_bright-rainbow_orange),
+    var(--color_bright-rainbow_yellow),
+    var(--color_bright-rainbow_lime),
+    var(--color_bright-rainbow_teal),
+    var(--color_bright-rainbow_light-blue),
+    var(--color_bright-rainbow_blue),
+    var(--color_bright-rainbow_purple),
+    var(--color_bright-rainbow_violet),
+    var(--color_bright-rainbow_pink)
   );
 }
 
-.theme-rainbow {
-  --font_headings_family: 'Titan One', cursive;
-  --font_body_family: sans-serif;
-  --font_headings_size: 50px;
-  --font_body_size: 16px;
-
-  --color_gradient: var(--color_bright-rainbow-gradient);
-  --color_text-background: radial-gradient(circle, 
-          rgba(255,255,255,1) 0%, 
-          rgba(255,255,255,1) 80%, 
-          rgba(255,255,255,0) 80%);
-  --card_background:  var(--color_rainbow-gradient);
-  --card_background-size: 400% 400%;
-  --card_animation: gradient 10s ease infinite;
-}
-
-
-
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
