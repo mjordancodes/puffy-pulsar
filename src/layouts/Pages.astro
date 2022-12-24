@@ -9,7 +9,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body>
+  <body id="body">
     <!-- <Header title={SITE_TITLE} /> -->
     <main id="main">
       <slot />
@@ -22,19 +22,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
     <script>
       const themeButtons = document.getElementsByClassName("theme-selection");
-      const mainContainer = document.getElementById("main");
+      const bodyContainer = document.getElementById("body");
 
       function handleClick() {
         let themeClicked = this.getAttribute("id");
 
-        mainContainer.classList.remove("theme-default", "theme-rainbow");
+        bodyContainer.classList.remove("theme-default", "theme-rainbow");
 
         switch (themeClicked) {
           case "default":
-            mainContainer.classList.add("theme-default");
+            bodyContainer.classList.add("theme-default");
             break;
           case "rainbow":
-            mainContainer.classList.add("theme-rainbow");
+            bodyContainer.classList.add("theme-rainbow");
             break;
         }
       }

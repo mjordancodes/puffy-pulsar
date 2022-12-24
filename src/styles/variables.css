@@ -3,7 +3,7 @@
   --font_headings_family: sans-serif;
   --font_headings_size: 32px;
   --font_body_family: sans-serif;
-  --font_body_size: 16px;
+  --font_body_size: 18px;
   --font_color: : var(--color_black);
 
   /* COLORS */
@@ -12,14 +12,14 @@
   --color_gradient: var(color_rainbow-gradient);
   --color_accent: var(--color_bright-rainbow_blue);
 
-  --color_light-rainbow_red: rgba(255, 159, 159, 0.8);
-  --color_light-rainbow_orange: rgba(251, 198, 133, 0.8);
-  --color_light-rainbow_yellow: rgba(251, 241, 121, 0.8);
-  --color_light-rainbow_lime: rgba(169, 252, 126, 0.8);
-  --color_light-rainbow_green: rgba(130, 240, 200, 0.8);
-  --color_light-rainbow_blue: rgba(149, 202, 228, 0.8);
-  --color_light-rainbow_purple: rgba(168, 168, 216, 0.8);
-  --color_light-rainbow_pink: rgba(203, 166, 200, 0.8);
+  --color_light-rainbow_red: rgba(255, 159, 159, 1);
+  --color_light-rainbow_orange: rgba(251, 198, 133, 1);
+  --color_light-rainbow_yellow: rgba(251, 241, 121, 1);
+  --color_light-rainbow_lime: rgba(169, 252, 126, 1);
+  --color_light-rainbow_green: rgba(130, 240, 200, 1);
+  --color_light-rainbow_blue: rgba(149, 202, 228, 1);
+  --color_light-rainbow_purple: rgba(168, 168, 216, 1);
+  --color_light-rainbow_pink: rgba(203, 166, 200, 1);
 
   --color_bright-rainbow_red: rgba(255, 000, 000, 1);
   --color_bright-rainbow_orange: rgba(255, 154, 000, 1);
