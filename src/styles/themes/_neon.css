@@ -1,5 +1,8 @@
 .theme-neon {
   --card_background: var(--color_purple-darker);
+  --font_headings_family: Audiowide;
+  --font_headings_size: 50px;
+  --font_body_family: Audiowide;
 }
 
 .theme-neon #intro-card {

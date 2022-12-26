@@ -3,13 +3,13 @@
 @import "./themes/themes.css";
 * {
   box-sizing: border-box;
+  font-family: var(--font_body_family);
+  font-size: var(--font_body_size);
+  color: var(--font_color);
 }
 
 body {
   margin: 0;
-  font-family: var(--font_body_family);
-  font-size: var(--font_body_size);
-  color: var(--font_color);
 }
 
 h1,
