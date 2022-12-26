@@ -1,0 +1,62 @@
+.theme-neon {
+  --card_background: var(--color_purple-darker);
+}
+
+.theme-neon #intro-card {
+  background-image: linear-gradient(
+      var(--color_purple-dark) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to right, var(--color_purple-dark) 1px, transparent 1px);
+  background-size: 15px 15px;
+}
+
+.theme-neon #intro-card #profile-picture.photo {
+  display: none;
+}
+
+.theme-neon #intro-card #profile-picture {
+  filter: brightness(200%);
+  mix-blend-mode: difference;
+  transform: rotate(7deg) scale(1.25);
+}
+
+.theme-neon #intro-card #author-name {
+  color: var(--color_neon-red);
+  text-shadow: 0 0 10px var(--color_neon-red);
+}
+
+.theme-neon #intro-card #facts li {
+  color: var(--color_neon-orange);
+  text-shadow: 0 0 10px var(--color_neon-orange);
+}
+
+.theme-neon #intro-card #facts {
+  border: 5px solid var(--color_neon-pink);
+  margin: 10px;
+  box-shadow: 0 0 10px var(--color_neon-pink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+}
+
+.theme-neon #intro-card #facts li:first-child a {
+  color: var(--color_neon-yellow);
+  text-shadow: 0 0 10px var(--color_neon-yellow);
+}
+
+.theme-neon #intro-card #facts li:nth-child(2) span:nth-child(2) {
+  color: var(--color_neon-green);
+  text-shadow: 0 0 10px var(--color_neon-green);
+}
+
+.theme-neon #intro-card #facts li:nth-child(3) span {
+  color: var(--color_neon-blue);
+  text-shadow: 0 0 10px var(--color_neon-blue);
+}
+
+.theme-neon #intro-card #facts li:nth-child(4) span {
+  color: var(--color_neon-purple);
+  text-shadow: 0 0 10px var(--color_neon-purple);
+}
