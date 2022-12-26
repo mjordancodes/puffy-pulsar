@@ -18,6 +18,14 @@
   border-left-color: var(--color_bright-rainbow_lime);
   outline: 5px solid var(--color_bright-rainbow_light-blue);
 }
+
+.theme-rainbow #intro-card #profile-picture.photo {
+  display: none;
+}
+
+.theme-default #intro-card #profile-picture.illustration {
+  display: none;
+}
 .theme-rainbow #intro-card #author-name {
   background: var(--color_gradient);
   -webkit-background-clip: text;

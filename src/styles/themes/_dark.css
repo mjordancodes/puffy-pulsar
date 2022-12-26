@@ -4,7 +4,6 @@
 }
 
 .theme-dark #intro-card {
-  /* box-shadow: inset 0 0 20px 5px var(--color_white); */
   border-top-color: var(--color_white);
   border-right-color: var(--color_black);
   border-bottom-color: var(--color_white);
@@ -14,6 +13,9 @@
   outline: 2px solid black;
 }
 
+.theme-dark #intro-card #profile-picture.illustration {
+  display: none;
+}
 .theme-dark #intro-card img {
   filter: grayscale(1) brightness(2);
   transform: scale(0.8);

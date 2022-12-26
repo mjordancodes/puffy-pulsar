@@ -1,0 +1,7 @@
+.theme-default #intro-card {
+  border: 1px solid var(--color_black);
+}
+
+.theme-default #intro-card #profile-picture.illustration {
+  display: none;
+}
