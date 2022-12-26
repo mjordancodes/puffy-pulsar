@@ -17,6 +17,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
     <div id="controls">
       <button id="default" class="theme-selection">Default</button>
       <button id="rainbow" class="theme-selection">Rainbow</button>
+      <button id="dark" class="theme-selection">Dark</button>
     </div>
     <Footer />
 
@@ -27,7 +28,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
       function handleClick() {
         let themeClicked = this.getAttribute("id");
 
-        bodyContainer.classList.remove("theme-default", "theme-rainbow");
+        bodyContainer.classList.remove(
+          "theme-default",
+          "theme-rainbow",
+          "theme-dark"
+        );
 
         switch (themeClicked) {
           case "default":
@@ -35,6 +40,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
             break;
           case "rainbow":
             bodyContainer.classList.add("theme-rainbow");
+            break;
+          case "dark":
+            bodyContainer.classList.add("theme-dark");
             break;
         }
       }
@@ -69,7 +77,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
         justify-content: space-around;
         margin: 0 auto 25px;
         width: 100%;
-        max-width: 300px;
+        max-width: 500px;
       }
     </style>
   </body>

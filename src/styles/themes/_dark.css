@@ -1,0 +1,33 @@
+.theme-dark {
+  --card_background: var(--color_black);
+  --font_color: var(--color_white);
+}
+
+.theme-dark #intro-card {
+  /* box-shadow: inset 0 0 20px 5px var(--color_white); */
+  border-top-color: var(--color_white);
+  border-right-color: var(--color_black);
+  border-bottom-color: var(--color_white);
+  border-left-color: var(--color_black);
+  border-width: 15px;
+  border-style: solid;
+  outline: 2px solid black;
+}
+
+.theme-dark #intro-card img {
+  filter: grayscale(1) brightness(2);
+  transform: scale(0.8);
+  border-radius: 50% 20%/10% 50%;
+  border: 5px solid var(--color_white);
+  outline: 15px dotted var(--color_white);
+}
+
+.theme-dark #intro-card #author-name {
+  border-bottom: 5px dashed var(--color_white);
+}
+
+.theme-dark button.theme-selection {
+  background: var(--color_black);
+  box-shadow: inset 0 0 10px 2px var(--color_white);
+  color: var(--color_white);
+}

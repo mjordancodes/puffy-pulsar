@@ -34,6 +34,7 @@ button {
   border: 3px solid var(--color_black);
   background-color: transparent;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 button.theme-selection {

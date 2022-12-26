@@ -8,6 +8,7 @@
 
   /* COLORS */
   --color_black: #222222;
+  --color_gray-50: #808080;
   --color_white: #ffffff;
   --color_gradient: var(color_rainbow-gradient);
   --color_accent: var(--color_bright-rainbow_blue);
@@ -31,9 +32,6 @@
   --color_bright-rainbow_purple: rgba(095, 021, 242, 1);
   --color_bright-rainbow_violet: rgba(186, 012, 248, 1);
   --color_bright-rainbow_pink: rgba(251, 007, 217, 1);
-
-
-
 
 
   --color_rainbow-gradient: linear-gradient(

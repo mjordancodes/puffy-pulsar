@@ -1,8 +1,8 @@
 .theme-rainbow {
   --font_headings_family: "Titan One", cursive;
   --font_headings_size: 50px;
-
   --font_body_family: sans-serif;
+  --font_color: var(--color_black);
 
   --card_background: var(--color_rainbow-gradient);
   --card_background-size: 300% 100%;
@@ -11,6 +11,7 @@
 }
 .theme-rainbow #intro-card {
   border-width: 10px;
+  border-style: solid;
   border-top-color: var(--color_bright-rainbow_red);
   border-right-color: var(--color_bright-rainbow_orange);
   border-bottom-color: var(--color_bright-rainbow_yellow);
@@ -30,10 +31,6 @@
 .theme-rainbow #intro-card #facts ul {
   background: var(--color_white);
   padding: 15px 15px 10px;
-}
-
-.theme-rainbow #intro-card #facts ul li {
-  padding-bottom: 5px;
 }
 
 .theme-rainbow #intro-card #facts ul .job span,
