@@ -30,6 +30,9 @@
 
 .theme-dark button.theme-selection {
   background: var(--color_black);
-  box-shadow: inset 0 0 10px 2px var(--color_white);
   color: var(--color_white);
+}
+
+.theme-dark button.theme-selection#dark {
+  box-shadow: inset 0 0 10px 2px var(--color_white);
 }
