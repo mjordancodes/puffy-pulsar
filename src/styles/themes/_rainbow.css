@@ -1,6 +1,5 @@
 .theme-rainbow {
   --font_headings_family: "Titan One", cursive;
-  --font_headings_size: 50px;
   --font_body_family: sans-serif;
   --font_color: var(--color_black);
 

@@ -7,7 +7,6 @@
   display: none;
 }
 
-.theme-default #intro-card #author-name,
 .theme-default #intro-card a {
   color: var(--color_accent);
 }
