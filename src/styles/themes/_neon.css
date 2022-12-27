@@ -63,3 +63,24 @@
   color: var(--color_neon-purple);
   text-shadow: 0 0 10px var(--color_neon-purple);
 }
+
+.theme-neon button.theme-selection {
+  background-color: var(--color_purple-darker);
+  background-image: linear-gradient(
+      var(--color_purple-dark) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to right, var(--color_purple-dark) 1px, transparent 1px);
+  background-size: 15px 15px;
+  border-color: var(--color_neon-red);
+  color: var(--color_neon-red);
+  text-shadow: 0 0 10px var(--color_neon-red);
+  box-shadow: 0 0 10px var(--color_neon-red);
+}
+
+.theme-neon button.theme-selection#neon {
+  border-color: var(--color_neon-orange);
+  color: var(--color_neon-orange);
+  text-shadow: 0 0 10px var(--color_neon-orange);
+  box-shadow: 0 0 10px var(--color_neon-orange);
+}
