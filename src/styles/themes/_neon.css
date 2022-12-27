@@ -28,19 +28,22 @@
   text-shadow: 0 0 10px var(--color_neon-red);
 }
 
-.theme-neon #intro-card #facts li {
-  color: var(--color_neon-orange);
-  text-shadow: 0 0 10px var(--color_neon-orange);
-}
-
 .theme-neon #intro-card #facts {
-  border: 5px solid var(--color_neon-pink);
   margin: 10px;
-  box-shadow: 0 0 10px var(--color_neon-pink);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: right;
+  border: 5px solid var(--color_neon-pink);
+  box-shadow: 0 0 10px var(--color_neon-pink);
+  outline-offset: -10px;
+  outline: 2px dashed var(--color_white);
+  padding: 12px;
+}
+
+.theme-neon #intro-card #facts li {
+  color: var(--color_neon-orange);
+  text-shadow: 0 0 10px var(--color_neon-orange);
 }
 
 .theme-neon #intro-card #facts li:first-child a {

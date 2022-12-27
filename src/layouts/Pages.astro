@@ -9,16 +9,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body id="body" class="theme-default">
+  <body id="body" class="theme-neon">
     <!-- <Header title={SITE_TITLE} /> -->
     <main id="main">
       <slot />
     </main>
     <div id="controls">
-      <button id="default" class="theme-selection">Default</button>
+      <button id="neon" class="theme-selection">Neon</button>
       <button id="rainbow" class="theme-selection">Rainbow</button>
       <button id="dark" class="theme-selection">Dark</button>
-      <button id="neon" class="theme-selection">Neon</button>
     </div>
     <Footer />
 
@@ -30,16 +29,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
         let themeClicked = this.getAttribute("id");
 
         bodyContainer.classList.remove(
-          "theme-default",
           "theme-rainbow",
           "theme-dark",
           "theme-neon"
         );
 
         switch (themeClicked) {
-          case "default":
-            bodyContainer.classList.add("theme-default");
-            break;
           case "rainbow":
             bodyContainer.classList.add("theme-rainbow");
             break;

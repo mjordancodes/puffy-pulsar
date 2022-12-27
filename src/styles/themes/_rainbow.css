@@ -15,7 +15,11 @@
   border-right-color: var(--color_bright-rainbow_orange);
   border-bottom-color: var(--color_bright-rainbow_yellow);
   border-left-color: var(--color_bright-rainbow_lime);
-  outline: 5px solid var(--color_bright-rainbow_light-blue);
+  box-shadow: 0 0 0 5px var(--color_bright-rainbow_light-blue),
+    0 0 0 10px var(--color_bright-rainbow_blue),
+    0 0 0 15px var(--color_bright-rainbow_purple),
+    0 0 0 20px var(--color_bright-rainbow_violet),
+    0 0 0 25px var(--color_bright-rainbow_pink);
 }
 
 .theme-rainbow #intro-card #profile-picture.photo {
