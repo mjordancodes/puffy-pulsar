@@ -1,3 +1,7 @@
+.theme-shape {
+  --font_headings_family: "Megrim", cursive;
+}
+
 .theme-shape #intro-card::before {
   content: ""; /* To generate the box */
   position: absolute;
@@ -20,7 +24,7 @@
   z-index: -2;
   background: var(--color_accent);
   transform: skew(-30deg);
-  filter: saturate(25%);
+  filter: saturate(50%);
 }
 
 .theme-shape #intro-card {
@@ -30,7 +34,7 @@
 .theme-shape #intro-card #profile-picture {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   margin: 10px;
-  animation: 15s ease-in-out 500ms infinite alternate imageAnimation;
+  animation: 20s ease-in-out 500ms infinite alternate imageAnimation;
 }
 
 .theme-shape #intro-card #profile-picture:hover {
@@ -134,4 +138,14 @@
 
   background-size: 100% 51%;
   background-repeat: no-repeat;
+}
+
+.theme-shape button.theme-selection {
+  background-color: var(--color_accent);
+  border-color: var(--color_bright-rainbow_yellow);
+  filter: saturate(50%);
+}
+
+.theme-shape button.theme-selection#shape {
+  filter: saturate(100%);
 }
