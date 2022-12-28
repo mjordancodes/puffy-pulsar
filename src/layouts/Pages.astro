@@ -18,6 +18,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
       <button id="neon" class="theme-selection">Neon</button>
       <button id="rainbow" class="theme-selection">Rainbow</button>
       <button id="dark" class="theme-selection">Dark</button>
+      <button id="shape" class="theme-selection">Shapes</button>
     </div>
     <Footer />
 
@@ -31,7 +32,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
         bodyContainer.classList.remove(
           "theme-rainbow",
           "theme-dark",
-          "theme-neon"
+          "theme-neon",
+          "theme-shape"
         );
 
         switch (themeClicked) {
@@ -43,6 +45,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
             break;
           case "neon":
             bodyContainer.classList.add("theme-neon");
+            break;
+          case "shape":
+            bodyContainer.classList.add("theme-shape");
             break;
         }
       }

@@ -1,0 +1,137 @@
+.theme-shape #intro-card::before {
+  content: ""; /* To generate the box */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: var(--color_accent);
+  transform: skew(45deg) scaleX(1.1);
+}
+
+.theme-shape #intro-card::after {
+  content: ""; /* To generate the box */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+  background: var(--color_accent);
+  transform: skew(-30deg);
+  filter: saturate(25%);
+}
+
+.theme-shape #intro-card {
+  position: relative;
+}
+
+.theme-shape #intro-card #profile-picture {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  margin: 10px;
+  animation: 15s ease-in-out 500ms infinite alternate imageAnimation;
+}
+
+.theme-shape #intro-card #profile-picture:hover {
+  animation-play-state: paused;
+}
+
+@keyframes imageAnimation {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  10% {
+    clip-path: polygon(50% 0, 100% 0, 50% 100%, 0 0);
+  }
+  20% {
+    clip-path: polygon(100% 0, 100% 0, 50% 100%, 0 50%);
+  }
+  30% {
+    clip-path: polygon(100% 100%, 100% 0, 50% 100%, 0 100%);
+  }
+  40% {
+    clip-path: polygon(100% 0, 50% 0, 50% 100%, 0 100%);
+  }
+  50% {
+    clip-path: polygon(100% 0, 100% 0, 50% 100%, 0 50%);
+  }
+  60% {
+    clip-path: polygon(100% 0, 0 100%, 100% 0, 0 100%);
+  }
+  70% {
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  }
+  80% {
+    clip-path: polygon(0 0, 50% 0, 100% 0, 50% 100%);
+  }
+  90% {
+    clip-path: polygon(50% 0, 50% 0, 0 50%, 50% 100%);
+  }
+  100% {
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  }
+}
+
+.theme-shape #intro-card #profile-picture.illustration {
+  display: none;
+}
+
+.theme-shape #intro-card #author-name {
+  width: max-content;
+  padding: 0 15px;
+  background: var(--color_bright-rainbow_yellow);
+  background: radial-gradient(
+        circle at top left,
+        transparent 15px,
+        var(--color_bright-rainbow_yellow) 0
+      )
+      top left,
+    radial-gradient(
+        circle at top right,
+        transparent 15px,
+        var(--color_bright-rainbow_yellow) 0
+      )
+      top right,
+    radial-gradient(
+        circle at bottom right,
+        transparent 15px,
+        var(--color_bright-rainbow_yellow) 0
+      )
+      bottom right,
+    radial-gradient(
+        circle at bottom left,
+        transparent 15px,
+        var(--color_bright-rainbow_yellow) 0
+      )
+      bottom left;
+  background-size: 51% 51%;
+  background-repeat: no-repeat;
+}
+
+.theme-shape #intro-card #facts,
+.theme-shape #intro-card #author-name {
+  margin-left: 20px;
+}
+.theme-shape #intro-card #facts li {
+  margin-bottom: 10px;
+}
+.theme-shape #intro-card #facts a {
+  padding: 5px 30px 5px 10px;
+  background: rgba(255, 255, 255, 0.8);
+  background: linear-gradient(
+        -45deg,
+        transparent 15px,
+        rgba(255, 255, 255, 0.5) 0
+      )
+      bottom,
+    linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.8) calc(100% - 15px),
+        transparent 0
+      )
+      top;
+
+  background-size: 100% 51%;
+  background-repeat: no-repeat;
+}
