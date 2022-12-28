@@ -33,7 +33,6 @@
   background: var(--color_gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   border-bottom: 10px solid var(--color_accent);
   text-shadow: 4px 4px 0 var(--color_white), 8px 8px 0 var(--color_black);
   margin: 10px;
@@ -41,7 +40,10 @@
 
 .theme-rainbow #intro-card #facts ul {
   background: var(--color_white);
+  border: 10px solid rgba(255, 255, 255, 0.5);
+  background-clip: padding-box;
   padding: 15px 15px 10px;
+  border-radius: 15px;
 }
 
 .theme-rainbow #intro-card #facts ul .job span,
