@@ -23,9 +23,24 @@
   transform: rotate(7deg) scale(1.25);
 }
 
-.theme-neon #intro-card #author-name {
+.theme-neon #intro-card #title {
   color: var(--color_neon-red);
   text-shadow: 0 0 10px var(--color_neon-red);
+  text-align: right;
+  padding-right: 10px;
+}
+.theme-neon #intro-card #title #author-name {
+  text-align: right;
+}
+
+.theme-neon #intro-card #title .job *:first-child {
+  color: var(--color_neon-orange);
+  text-shadow: 0 0 10px var(--color_neon-orange);
+}
+
+.theme-neon #intro-card #title .job *:nth-child(2) {
+  color: var(--color_neon-yellow);
+  text-shadow: 0 0 10px var(--color_neon-yellow);
 }
 
 .theme-neon #intro-card #facts {
@@ -42,28 +57,38 @@
 }
 
 .theme-neon #intro-card #facts li {
+  color: var(--color_neon-red);
+  text-shadow: 0 0 10px var(--color_neon-red);
+}
+
+.theme-neon #intro-card #facts li:nth-child(1) *:nth-child(2) {
   color: var(--color_neon-orange);
   text-shadow: 0 0 10px var(--color_neon-orange);
 }
-
-.theme-neon #intro-card #facts li:first-child a {
+.theme-neon #intro-card #facts li:nth-child(2) *:nth-child(2) {
   color: var(--color_neon-yellow);
   text-shadow: 0 0 10px var(--color_neon-yellow);
 }
-
-.theme-neon #intro-card #facts li:nth-child(2) span:nth-child(2) {
+.theme-neon #intro-card #facts li:nth-child(3) *:nth-child(2) {
   color: var(--color_neon-green);
   text-shadow: 0 0 10px var(--color_neon-green);
 }
-
-.theme-neon #intro-card #facts li:nth-child(3) span {
+.theme-neon #intro-card #facts li:nth-child(4) *:nth-child(2) {
   color: var(--color_neon-blue);
   text-shadow: 0 0 10px var(--color_neon-blue);
 }
-
-.theme-neon #intro-card #facts li:nth-child(4) span {
+.theme-neon #intro-card #facts li:nth-child(5) *:nth-child(2) {
   color: var(--color_neon-purple);
   text-shadow: 0 0 10px var(--color_neon-purple);
+}
+
+.theme-neon #intro-card #facts #open-to-work {
+  text-align: center;
+}
+.theme-neon #intro-card #facts #open-to-work span {
+  display: inline-block;
+  color: white;
+  text-shadow: 0 0 10px var(white);
 }
 
 .theme-neon button.theme-selection {

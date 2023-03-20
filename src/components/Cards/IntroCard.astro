@@ -1,5 +1,10 @@
 ---
-import { AUTHOR_NAME, JOB_COMPANY, JOB_TITLE, JOB_URL } from "../../config";
+import {
+  AUTHOR_NAME,
+  JOB_TITLE_FUN,
+  JOB_TITLE,
+  OPEN_TO_WORK,
+} from "../../config";
 ---
 
 <div id="intro-card">
@@ -15,98 +20,120 @@ import { AUTHOR_NAME, JOB_COMPANY, JOB_TITLE, JOB_URL } from "../../config";
     alt="stylized illustration of female with brown hair and blue glasses"
     class="illustration"
   />
-  <h1 id="author-name">{AUTHOR_NAME}</h1>
+  <div id="title">
+    <h1 id="author-name">{AUTHOR_NAME}</h1>
+    <p class="job">
+      <span class="job-title">{JOB_TITLE}</span>
+      <span class="fun-title">{JOB_TITLE_FUN}</span>
+    </p>
+  </div>
   <div id="facts">
     <ul>
-      <li class="website">
-        <span>Website:</span>
-        <a href="https://mjordan.codes">mjordan.codes</a>
-      </li>
       <li class="pronouns">
         <span>Pronouns:</span>
         <span>she/her</span>
       </li>
-      <li class="job">
-        <span>{JOB_TITLE}</span> at <a
-          href={JOB_URL}
-          target="_blank"
-          rel="noopener noreferrer">{JOB_COMPANY}</a
-        >
+      <li class="website">
+        <span>Life:</span>
+        <a href="https://www.instagram.com/mjordancodes/">Instagram</a>
       </li>
-      <li class="volunteer">
-        <span>Director</span> at <a
-          href="https://www.womenwhocode.com/boulder-denver/about"
-          target="_blank"
-          rel="noopener noreferrer">Women Who Code Boulder/Denver</a
-        >
+      <li class="website">
+        <span>Work Experience:</span>
+        <a href="https://www.linkedin.com/in/mjordancodes/">LinkedIn</a>
+      </li>
+      <li class="website">
+        <span>Experiments:</span>
+        <a href="https://codepen.io/mjordancodes">CodePen</a>
+      </li>
+      <li class="website">
+        <span>Code:</span>
+        <a href="https://github.com/mjordancodes">GitHub</a>
+      </li>
+      <!-- If OPEN_TO_WORK.... show this -->
+      <li id="open-to-work">
+        <p>
+          I'm open to work! Let's chat:
+          <span>hi (at) mjordan (dot) codes</span>
+        </p>
       </li>
     </ul>
   </div>
-</div>
 
-<style lang="scss">
-  #intro-card {
-    font-family: var(--font_body_family);
-    font-size: var(--font_body_size);
-    background: var(--card_background);
-    background-size: var(--card_background-size);
-    animation: var(--card_animation);
-    display: grid;
-    grid-template-rows: 200px 1fr;
-    grid-template-areas:
-      "img"
-      "name"
-      "facts";
-    #profile-picture {
-      grid-area: img;
-      margin: 0 auto;
-      align-self: end;
-      max-width: 100%;
-      max-height: 100%;
-      &.photo {
-        aspect-ratio: 1/1;
-        object-fit: cover;
-        object-position: center -25px;
-      }
-      &.illustration {
-      }
-    }
-    #author-name {
-      grid-area: name;
-      margin: 20px 0;
-      text-align: center;
-      font-family: var(--font_headings_family);
-      font-size: var(--font_headings_size);
-    }
-    #facts {
-      grid-area: facts;
-      padding: 10px;
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        li {
-          padding-bottom: 5px;
+  <style lang="scss">
+    #intro-card {
+      font-family: var(--font_body_family);
+      font-size: var(--font_body_size);
+      background: var(--card_background);
+      background-size: var(--card_background-size);
+      animation: var(--card_animation);
+      display: grid;
+      grid-template-rows: 200px 1fr;
+      grid-template-areas:
+        "img"
+        "name"
+        "facts";
+      #profile-picture {
+        grid-area: img;
+        margin: 0 auto;
+        align-self: end;
+        max-width: 100%;
+        max-height: 100%;
+        &.photo {
+          aspect-ratio: 1/1;
+          object-fit: cover;
+          object-position: center -25px;
         }
-        .job,
-        .volunteer {
-          span,
-          a {
-            font-weight: bold;
+        &.illustration {
+        }
+      }
+      #title {
+        grid-area: name;
+        font-family: var(--font_headings_family);
+        margin: 20px 0;
+        #author-name {
+          text-align: center;
+          font-size: var(--font_headings_size);
+          margin: 0;
+        }
+        .job {
+          margin: 0;
+        }
+      }
+
+      .job *:nth-child(2) {
+        display: inline-block;
+        transform: rotate(0.5turn);
+      }
+      #facts {
+        grid-area: facts;
+        padding: 10px;
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          li {
+            padding-bottom: 5px;
+          }
+          .job,
+          .volunteer {
+            span,
+            a {
+              font-weight: bold;
+            }
           }
         }
       }
     }
-  }
 
-  @media screen and (min-width: 600px) {
-    #intro-card {
-      grid-template-rows: auto 1fr;
-      grid-template-columns: 1fr 2fr;
-      grid-template-areas:
-        "img name"
-        "img facts";
-      width: clamp(600px, 75%, 750px);
+    @media screen and (min-width: 600px) {
+      #intro-card {
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+          "img name"
+          "img facts";
+        width: clamp(600px, 75%, 750px);
+      }
     }
-  }
-</style>
+  </style>
+</div>
