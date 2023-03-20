@@ -29,13 +29,22 @@
 .theme-default #intro-card #profile-picture.illustration {
   display: none;
 }
-.theme-rainbow #intro-card #author-name {
+.theme-rainbow #intro-card #title {
+  text-align: center;
+}
+
+.theme-rainbow #intro-card #title #author-name {
   background: var(--color_gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border-bottom: 10px solid var(--color_accent);
   text-shadow: 4px 4px 0 var(--color_white), 8px 8px 0 var(--color_black);
   margin: 10px;
+}
+.theme-rainbow #intro-card #title .job {
+  --font_color: var(--color_accent);
+  justify-content: space-around;
+  font-weight: bold;
 }
 
 .theme-rainbow #intro-card #facts ul {
@@ -46,11 +55,11 @@
   border-radius: 15px;
 }
 
-.theme-rainbow #intro-card #facts ul .job span,
-.theme-rainbow #intro-card #facts ul .volunteer span {
+.theme-rainbow #intro-card #facts ul #open-to-work span {
   background: var(--color_gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 .theme-rainbow button.theme-selection {

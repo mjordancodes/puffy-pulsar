@@ -82,11 +82,7 @@
   text-shadow: 0 0 10px var(--color_neon-purple);
 }
 
-.theme-neon #intro-card #facts #open-to-work {
-  text-align: center;
-}
 .theme-neon #intro-card #facts #open-to-work span {
-  display: inline-block;
   color: white;
   text-shadow: 0 0 10px var(white);
 }
