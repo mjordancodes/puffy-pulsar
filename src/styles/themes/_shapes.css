@@ -114,8 +114,14 @@
 }
 
 .theme-shape #intro-card #facts,
-.theme-shape #intro-card #author-name {
+.theme-shape #intro-card #title {
   margin-left: 20px;
+}
+.theme-shape #intro-card #title .job {
+  justify-content: flex-start;
+}
+.theme-shape #intro-card #title .job *:first-child {
+  padding-right: 10px;
 }
 .theme-shape #intro-card #facts li {
   margin-bottom: 10px;
@@ -138,6 +144,11 @@
 
   background-size: 100% 51%;
   background-repeat: no-repeat;
+}
+
+.theme-shape #intro-card #facts #open-to-work span {
+  display: block;
+  font-weight: bold;
 }
 
 .theme-shape button.theme-selection {
