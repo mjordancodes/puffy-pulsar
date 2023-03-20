@@ -24,8 +24,13 @@
   outline: 15px dotted var(--color_white);
 }
 
-.theme-dark #intro-card #author-name {
+.theme-dark #intro-card #title #author-name {
   border-bottom: 5px dashed var(--color_white);
+}
+
+.theme-dark #intro-card #facts #open-to-work span {
+  display: block;
+  font-weight: bold;
 }
 
 .theme-dark button.theme-selection {
