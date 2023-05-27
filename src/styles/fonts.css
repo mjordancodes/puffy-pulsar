@@ -1,1 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Megrim&family=Titan+One&display=swap");
+@font-face {
+  font-family: "Audiowide";
+  src: url("/fonts/Audiowide-Regular.woff2");
+}
+
+
+@font-face {
+  font-family: "Megrim";
+  src: url("/fonts/Megrim-Regular.woff2");
+}
+
+@font-face {
+  font-family: "Titan One";
+  src: url("/fonts/TitanOne-Regular.woff2");
+}
